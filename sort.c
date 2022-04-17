@@ -4,17 +4,11 @@ int main(){
     int i;
     int k;
     int aux;
-    //int len = sizeof(vec);
     for (i = 0; i < 5; i++)
     {
-        for (k = 0; k < 5; k++)
+        for (k = 0; k < 4; k++)
         {
-            if (vec[i] > vec[k])
-            {
-                vec[i] = vec[i];
-                vec[k] = vec[k];
-            }
-            else if (vec[i] < vec[k])
+            if (vec[i] < vec[k])
             {
                 aux = vec[i];
                 vec[i] = vec[k];
