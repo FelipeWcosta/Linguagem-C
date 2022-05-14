@@ -1,28 +1,24 @@
 #include <stdio.h>
 int main(){
     //Incicalizacao das variaveis
-    int len;
     int i;
     int k;
     int aux;
-    int array[len];
-
-    //Recebimento da quantidade de elementos do vetor
-    printf("Digite a quantidade de elementos do vetor: ");
-    scanf("%i", &len);
+    int vec[3] = {0, 0, 0};
+    int len = 3;
 
     //Recebimento dos elementos do vetor
     for (i = 0; i < len; i++)
     {
         printf("Digite o valor do elemento: ");
-        scanf("%f", &array[i]);
+        scanf("%i", &vec[i]);
     }
 
     //Print do vetor desordenado
+    printf("Vetor desordenado: \n");
     for (i = 0; i < len; i++)
     {
-        printf("Vetor desordenado: \n");
-        printf("%i ", &array[i]);
+        printf("%i ", &vec[i]);
     }
     
     
@@ -31,20 +27,21 @@ int main(){
     {
         for (k = 0; k < 4; k++)
         {
-            if (array[i] < array[k])
+            if (vec[i] < vec[k])
             {
-                aux = array[i];
-                array[i] = array[k];
-                array[k] = aux;
+                aux = vec[i];
+                vec[i] = vec[k];
+                vec[k] = aux;
             }
         } 
     }
 
     //Print do vetor ordenado
+    printf("\n");
+    printf("Vetor ordenado: \n");
     for (i = 0; i < len; i++)
     {
-        printf("Vetor ordenado: \n");
-        printf("%i ", &array[i]);
+        printf("%i ", &vec[i]);
     }
     
     return 0;
