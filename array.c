@@ -1,14 +1,14 @@
 #include <stdio.h>
 int main(){
     //Incicalizacao das variaveis
-    int i;
-    int k;
     int aux;
-    int vec[3] = {0, 0, 0};
-    int len = 3;
+    int len;
+    printf("Digite o comprimento do vetor: ");
+    scanf("%i", &len);
+    int vec[len];
 
     //Recebimento dos elementos do vetor
-    for (i = 0; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
         printf("Digite o valor do elemento: ");
         scanf("%i", &vec[i]);
@@ -16,16 +16,16 @@ int main(){
 
     //Print do vetor desordenado
     printf("Vetor desordenado: \n");
-    for (i = 0; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
-        printf("%i ", &vec[i]);
+        printf("%i ", vec[i]);
     }
     
     
     //Ordenacao do vetor
-    for (i = 0; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
-        for (k = 0; k < 4; k++)
+        for (int k = 0; k < 4; k++)
         {
             if (vec[i] < vec[k])
             {
@@ -37,12 +37,10 @@ int main(){
     }
 
     //Print do vetor ordenado
-    printf("\n");
-    printf("Vetor ordenado: \n");
-    for (i = 0; i < len; i++)
+    printf("\nVetor ordenado: \n");
+    for (int i = 0; i < len; i++)
     {
-        printf("%i ", &vec[i]);
+        printf("%i ", vec[i]);
     }
-    
     return 0;
 }
